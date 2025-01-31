@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="D:\JC\JC.ICT\JC.GT\logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphify - Graph generation</title>
+    <link rel="stylesheet" href="graph.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Graphify</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Graph Description -->
+    <section id="graphInfo">
+        <h2>What is a Graph?</h2>
+        <p>A graph is a data structure that consists of a set of vertices (nodes) and edges (connections between the nodes).
+            Graphs are widely used to model relationships between objects, such as in social networks, computer networks,
+            transportation systems, and many other fields. A graph can be directed (with edges having a direction)
+            or undirected (edges without a direction), and it may or may not have weights (values associated with edges).</p>
+
+        <h3>Where are Graphs Used?</h3>
+        <p>Graphs have various real-world applications, such as:</p>
+        <ul>
+            <li><strong>Social Networks:</strong> Representing relationships between people, like friendships or followers.</li>
+            <li><strong>Transportation:</strong> Modeling roads, flight paths, or subway lines to find the shortest path between two locations.</li>
+            <li><strong>Computer Networks:</strong> Visualizing connections between devices in a network.</li>
+            <li><strong>Biology:</strong> Mapping genetic sequences or modeling food chains.</li>
+            <li><strong>Recommendation Systems:</strong> Suggesting products or content based on user preferences.</li>
+        </ul>
+
+        <h3>Example Graphs</h3>
+        <div class="example-graphs">
+            <img src="1.webp" alt="Example Graph 1" style="width:300px;height:auto;margin:10px;">
+            <img src="2.png" alt="Example Graph 2" style="width:300px;height:auto;margin:10px;">
+            <img src="3.png" alt="Example Graph 3" style="width:300px;height:auto;margin:10px;">
+        </div>
+    </section>
+
+    <!-- Graph Generation Form Section -->
+    <div class="form-container">
+        <form id="graphForm" class="graph-form">
+            <label for="vertices">Vertices:</label>
+            <input type="text" id="vertices" placeholder="A,B,C" required />
+
+            <label for="edges">Edges (source-target-weight):</label>
+            <input type="text" id="edges" placeholder="A-B-1,B-C-2" required />
+
+            <label for="graphType">Graph Type:</label>
+            <select id="graphType" required>
+                <option value="undirected">Undirected</option>
+                <option value="directed">Directed</option>
+            </select>
+            <button type="submit">Generate Graph</button>
+        </form>
+    </div>
+    <div class="graph-container">
+        <div id="graph"></div>
+    </div>
+    <div class="zoom-container">
+        <button id="zoomIn">Zoom In</button>
+        <button id="zoomOut">Zoom Out</button>
+    </div>
+    <div id="graphdetail">
+        <h2>Graph Details</h2>
+        <div class="details">
+            <div class="detail-item">
+                <strong>Number of Vertices:</strong>
+                <span id="numVertices">0</span>
+            </div>
+            <div class="detail-item">
+                <strong>Number of Edges:</strong>
+                <span id="numEdges">0</span>
+            </div>
+        </div>
+        <div id="connectionTable">
+            <h3>Vertex Connections</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vertex</th>
+                        <th>Connected Vertices</th>
+                    </tr>
+                </thead>
+                <tbody id="connectionTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Developed by
+                <a href="https://www.linkedin.com/in/jaineel-chhatraliya" target="_blank">Jaineel Chhatraliya</a> and
+                <a href="https://www.linkedin.com/in/hetansh-shah-581732239/" target="_blank">Hetansh Shah</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="d3.v5.min.js"></script>
+    <script src="graph1.js"></script>
+
+</body>
+</html>

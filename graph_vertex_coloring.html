@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="D:\JC\JC.ICT\JC.GT\logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphify - Vertex Coloring</title>
+    <link rel="stylesheet" href="graph.css">
+    <link rel="stylesheet" href="general.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Graphify</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- .Vertex coloring description -->
+    <section id="graphInfo">
+        <h2>What is Vertex Coloring?</h2>
+        <p>Vertex coloring is a method of assigning colors to the vertices (nodes) of a graph such that no two adjacent vertices share the same color. This concept is a key part of graph theory and is used to solve various problems where conflict-free assignments are needed. The minimum number of colors required to color a graph is called its chromatic number. Vertex coloring is typically applied to undirected graphs, although it can also be extended to directed graphs in specific cases.</p>
+    
+        <h3>Why is Vertex Coloring Important?</h3>
+        <p>Vertex coloring has several practical applications in real-world scenarios, such as:</p>
+        <ul>
+            <li><strong>Scheduling Problems:</strong> Assigning time slots to tasks, exams, or employees in a way that avoids conflicts.</li>
+            <li><strong>Map Coloring:</strong> Ensuring that no two neighboring regions on a map share the same color, which can be used in geographical applications.</li>
+            <li><strong>Register Allocation:</strong> In compiler design, allocating a limited number of registers to variables in a program without conflicts.</li>
+            <li><strong>Frequency Assignment:</strong> Assigning different frequencies to nearby radio stations or cell towers to avoid interference.</li>
+            <li><strong>Puzzle and Game Design:</strong> Using vertex coloring to design puzzles like Sudoku, where numbers or colors need to be placed in a grid following certain rules.</li>
+        </ul>
+    
+        <h3>Examples of Vertex Coloring</h3>
+        <div class="example-graphs">
+            <img src="vcolor1.png" alt="Vertex Coloring Example 1" style="width:300px;height:auto;margin:10px;">
+            <img src="vcolor2.jpeg" alt="Vertex Coloring Example 2" style="width:300px;height:auto;margin:10px;">
+            <img src="vcolor3.png" alt="Vertex Coloring Example 3" style="width:300px;height:auto;margin:10px;">
+        </div>
+    </section>
+    
+
+    <!-- Graph Generation Form Section -->
+        <div class="form-container">
+          <form id="graphForm" class="graph-form">
+            <label for="vertices">Vertices:</label>
+            <input type="text" id="vertices" placeholder="A,B,C" required />
+  
+            <label for="edges">Edges (source-target-weight):</label>
+            <input type="text" id="edges" placeholder="A-B-1,B-C-2" required />
+  
+            <label for="graphType">Graph Type:</label>
+            <select id="graphType" required>
+              <option value="undirected">Undirected</option>
+              <option value="directed">Directed</option>
+            </select>
+            <button type="submit">Generate Graph</button>
+          </form>
+        </div>
+        <div class="graph-container">
+            <div id="graph"></div>
+        </div>
+        <div class="zoom-container">
+            <button id="zoomIn">Zoom In</button>
+            <button id="zoomOut">Zoom Out</button>
+        </div>
+        <p id="colorInfo" style="font-size: 14px; margin-top: 10px;"></p>
+
+    <footer>
+        <div class="footer-content">
+            <p>Developed by
+                <a href="https://www.linkedin.com/in/jaineel-chhatraliya" target="_blank">Jaineel Chhatraliya</a> and
+                <a href="https://www.linkedin.com/in/hetansh-shah-581732239/" target="_blank">Hetansh Shah</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="d3.v5.min.js"></script>
+    <script src="graph3.js"></script>
+    
+</body>
+</html>

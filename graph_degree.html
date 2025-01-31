@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="D:\JC\JC.ICT\JC.GT\logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphify - Degree Calculation</title>
+    <link rel="stylesheet" href="graph.css">
+    <link rel="stylesheet" href="general.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Graphify</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <!-- Degree Description -->
+    <section id="graphInfo">
+        <h2>What is Vertex Degree?</h2>
+        <p>The vertex degree in a graph refers to the number of edges connected to a particular vertex (node). In simple terms, it indicates how many connections a node has within the graph. The degree of a vertex is an important concept in graph theory, used to analyze the properties and structure of graphs. In undirected graphs, each edge adds to the degree of both connected vertices. In directed graphs, we distinguish between in-degree (edges coming into the vertex) and out-degree (edges going out of the vertex).</p>
+    
+        <h3>Why is Vertex Degree Important?</h3>
+        <p>Calculating the degree of vertices in a graph has several practical applications, including:</p>
+        <ul>
+            <li><strong>Network Analysis:</strong> Determining the most influential nodes in a network, such as identifying key influencers in social networks or critical nodes in computer networks.</li>
+            <li><strong>Graph Traversal:</strong> Optimizing search algorithms like Depth First Search (DFS) and Breadth First Search (BFS) by considering vertices with higher degrees first.</li>
+            <li><strong>Epidemiology:</strong> Analyzing how diseases spread by studying connections between individuals (nodes) and understanding which nodes have the most contacts.</li>
+            <li><strong>Web Page Ranking:</strong> In search engine algorithms, pages with higher degrees of connection might be considered more significant or popular.</li>
+            <li><strong>Power Grid Analysis:</strong> Assessing critical points in a power distribution network by calculating the degree of each station or node in the system.</li>
+        </ul>
+    
+        <h3>Examples of Vertex Degree</h3>
+        <div class="example-graphs">
+            <img src="deg1.webp" alt="Vertex Degree Example 1" style="width:300px;height:auto;margin:10px;">
+            <img src="deg2.png" alt="Vertex Degree Example 2" style="width:300px;height:auto;margin:10px;">
+            <img src="deg3.png" alt="Vertex Degree Example 3" style="width:300px;height:auto;margin:10px;">
+        </div>
+    </section>
+
+    <!-- Graph Generation Form Section -->
+        <div class="form-container">
+          <form id="graphForm" class="graph-form">
+            <label for="vertices">Vertices:</label>
+            <input type="text" id="vertices" placeholder="A,B,C" required />
+  
+            <label for="edges">Edges (source-target-weight):</label>
+            <input type="text" id="edges" placeholder="A-B-1,B-C-2" required />
+  
+            <label for="graphType">Graph Type:</label>
+            <select id="graphType" required>
+              <option value="undirected">Undirected</option>
+              <option value="directed">Directed</option>
+            </select>
+            <button type="submit">Generate Graph</button>
+          </form>
+        </div>
+        <div class="graph-container">
+            <div id="graph"></div>
+        </div>
+        <div class="zoom-container">
+            <button id="zoomIn">Zoom In</button>
+            <button id="zoomOut">Zoom Out</button>
+        </div>
+        <div id="graphdetail">
+            <h2>Graph Details</h2>
+            <div class="details">
+                <div class="detail-item">
+                    <strong>Number of Vertices:</strong>
+                    <span id="numVertices">0</span>
+                </div>
+                <div class="detail-item">
+                    <strong>Number of Edges:</strong>
+                    <span id="numEdges">0</span>
+                </div>
+            </div>
+            <div id="connectionTable">
+                <h3>Vertex Connections</h3>
+                <table>
+                    <thead>
+                        <tr id="connectionTableHeader">
+                            <th>Vertex</th>
+                            <th>Degree</th>
+                            <th>Connected Vertices</th>
+                        </tr>
+                    </thead>
+                    <tbody id="connectionTableBody">
+                        <!-- Rows will be populated here -->
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Developed by
+                <a href="https://www.linkedin.com/in/jaineel-chhatraliya" target="_blank">Jaineel Chhatraliya</a> and
+                <a href="https://www.linkedin.com/in/hetansh-shah-581732239/" target="_blank">Hetansh Shah</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="d3.v5.min.js"></script>
+    <script src="graph2.js"></script>
+    
+</body>
+</html>

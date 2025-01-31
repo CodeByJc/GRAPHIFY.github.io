@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="D:\JC\JC.ICT\JC.GT\logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphify - Dijkstra algorithm</title>
+    <link rel="stylesheet" href="graph.css">
+    <link rel="stylesheet" href="general.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Graphify</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Dijkstra Algorith Description -->
+    <section id="graphInfo">
+        <h2>What is Dijkstra's Algorithm?</h2>
+        <p>Dijkstra's algorithm is a popular graph search algorithm used to find the shortest path between nodes in a graph. It works by selecting the node with the smallest known distance from the start node, updating the distances of its neighbors, and repeating the process until all nodes have been visited. The algorithm is widely used in network routing, navigation systems, and many other fields where finding the shortest path is essential.</p>
+    
+        <h3>Where is Dijkstra's Algorithm Used?</h3>
+        <p>Dijkstra's algorithm has various real-world applications, including:</p>
+        <ul>
+            <li><strong>GPS Navigation:</strong> Finding the shortest route between two locations on a map.</li>
+            <li><strong>Network Routing:</strong> Determining the optimal path for data packets to travel across a network.</li>
+            <li><strong>Video Games:</strong> Guiding characters or objects along the shortest path to a target location.</li>
+            <li><strong>Logistics and Supply Chain:</strong> Optimizing delivery routes for transportation and shipping.</li>
+            <li><strong>Robotics:</strong> Helping robots navigate efficiently in dynamic environments.</li>
+        </ul>
+    
+        <h3>Examples of Dijkstra's Algorithm</h3>
+        <div class="example-graphs">
+            <img src="dij1.jpg" alt="Dijkstra's Algorithm Example 1" style="width:300px;height:auto;margin:10px;">
+            <img src="dij2.jpg" alt="Dijkstra's Algorithm Example 2" style="width:300px;height:auto;margin:10px;">
+            <img src="dij3.png" alt="Dijkstra's Algorithm Example 3" style="width:300px;height:auto;margin:10px;">
+        </div>
+    </section>
+    
+
+    <!-- Graph Generation Form Section -->
+        <div class="form-container">
+          <form id="graphForm" class="graph-form">
+            <label for="vertices">Vertices:</label>
+            <input type="text" id="vertices" placeholder="A,B,C" required />
+  
+            <label for="edges">Edges (source-target-weight):</label>
+            <input type="text" id="edges" placeholder="A-B-1,B-C-2" required />
+  
+            <label for="graphType">Graph Type:</label>
+            <select id="graphType" required>
+              <option value="undirected">Undirected</option>
+              <option value="directed">Directed</option>
+            </select>
+            <label for="startVertex">Start Vertex (for shortest path):</label>
+            <input type="text" id="startVertex" placeholder="A" />
+
+            <label for="endVertex">End Vertex (for shortest path):</label>
+            <input type="text" id="endVertex" placeholder="C" />
+
+            <button type="submit">Generate Graph</button>
+          </form>
+        </div>
+        <div class="graph-container">
+            <div id="graph"></div>
+        </div>
+        <div class="zoom-container">
+                <button id="zoomIn">Zoom In</button>
+                <button id="zoomOut">Zoom Out</button>
+        </div>
+        <!-- Add this below the graph container -->
+        <div class="details-container">          
+            <h3>Shortest Path Details</h3>
+            <p id="shortestPathDetails">Details about the shortest path will be displayed here.</p>
+          </div>
+          
+
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Developed by
+                <a href="https://www.linkedin.com/in/jaineel-chhatraliya" target="_blank">Jaineel Chhatraliya</a> and
+                <a href="https://www.linkedin.com/in/hetansh-shah-581732239/" target="_blank">Hetansh Shah</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="d3.v5.min.js"></script>
+    <script src="graph6.js"></script>
+    
+</body>
+</html>

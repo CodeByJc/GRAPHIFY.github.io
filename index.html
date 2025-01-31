@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graphify - Home</title>
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">Graphify</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero-section" id="home">
+      <div class="overlay">
+        <h1>Visualize, Manipulate, and Analyze Graphs Effortlessly!</h1>
+        <p>
+          Graphify is a web-based application designed to facilitate the
+          visualization, manipulation, and analysis of graphs, aimed at
+          enhancing education in Discrete Mathematics and Graph Theory.
+        </p>
+      </div>
+    </section>
+
+    <section class="feature1-section" id="features">
+      <h2>Features</h2>
+      <div class="features-container">
+        <div
+          class="feature-card"
+          onclick="location.href='graph_generation.html';"
+        >
+          <h3>Graph Generation</h3>
+          <p>Generate graphs based on a set of edges and vertices.</p>
+        </div>
+        <div class="feature-card" onclick="location.href='graph_degree.html';">
+          <h3>Vertex Degree Calculation</h3>
+          <p>
+            Determine each vertex's degree to understand its connectivity within
+            the graph.
+          </p>
+        </div>
+        <div
+          class="feature-card"
+          onclick="location.href='graph_vertex_coloring.html';"
+        >
+          <h3>Vertex Coloring</h3>
+          <p>
+            Assigns colors to vertices so that adjacent vertices have different
+            colors.
+          </p>
+        </div>
+        <div
+          class="feature-card"
+          onclick="location.href='graph_edge_coloring.html';"
+        >
+          <h3>Edge Coloring</h3>
+          <p>
+            Assigns colors to the edges of a graph such that no two edges
+            sharing a common vertex have the same color.
+          </p>
+        </div>
+        <div
+          class="feature-card"
+          onclick="location.href='graph_dijkstra.html';"
+        >
+          <h3>Dijkstra's Algorithm</h3>
+          <p>Find the shortest path between nodes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <h2>About</h2>
+      <div class="about-container">
+        <p>
+          Graphify is a comprehensive web application aimed at simplifying graph
+          theory and discrete mathematics. It allows users to effortlessly
+          generate and manipulate graphs, making it easier to explore complex
+          concepts. Key features include graph generation, vertex and edge
+          coloring, as well as algorithms like Dijkstra's for shortest paths and
+          both Depth First Search (DFS) and Breadth First Search (BFS) for graph
+          traversal. Whether you're calculating vertex degrees, analyzing
+          connectivity, or assigning colors to vertices and edges, Graphify
+          provides a suite of tools to support your learning or research.
+          Designed for students, educators, and professionals, Graphify
+          transforms complex graph operations into an intuitive experience.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          Developed by
+          <a
+            href="https://www.linkedin.com/in/jaineel-chhatraliya"
+            target="_blank"
+            >Jaineel Chhatraliya</a
+          >
+          and
+          <a href="www.linkedin.com/in/hetansh-shah-581732239" target="_blank"
+            >Hetansh Shah</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

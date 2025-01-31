@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="D:\JC\JC.ICT\JC.GT\logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphify - Home</title>
+    <link rel="stylesheet" href="graph.css">
+    <link rel="stylesheet" href="general.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Graphify</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Edge Coloring Description -->
+    <section id="graphInfo">
+        <h2>What is Edge Coloring?</h2>
+        <p>Edge coloring is a technique in graph theory where colors are assigned to the edges of a graph such that no two adjacent edges share the same color. This means that if two edges share a common vertex, they must be of different colors. The minimum number of colors required to achieve an edge coloring is called the chromatic index of the graph. Edge coloring is used to solve problems where resources or tasks must be assigned in a non-conflicting manner.</p>
+    
+        <h3>Why is Edge Coloring Important?</h3>
+        <p>Edge coloring has various practical applications, including:</p>
+        <ul>
+            <li><strong>Network Link Scheduling:</strong> Assigning different time slots to communication links in a network to avoid data collisions.</li>
+            <li><strong>Job Scheduling:</strong> Scheduling jobs on machines where each job requires exclusive use of resources for a certain period.</li>
+            <li><strong>Traffic Management:</strong> Managing traffic flow at intersections by ensuring that conflicting roads (edges) do not have green lights simultaneously.</li>
+            <li><strong>Timetable Design:</strong> Creating schedules for sports leagues, where teams (vertices) compete with each other (edges) without conflicts.</li>
+            <li><strong>Circuit Design:</strong> In electronic circuit design, ensuring that no two adjacent connections share the same signal line color to prevent interference.</li>
+        </ul>
+    
+        <h3>Examples of Edge Coloring</h3>
+        <div class="example-graphs">
+            <img src="ecolor1.png" alt="Edge Coloring Example 1" style="width:300px;height:auto;margin:10px;">
+            <img src="ecolor2.png" alt="Edge Coloring Example 2" style="width:300px;height:auto;margin:10px;">
+            <img src="ecolor3.png" alt="Edge Coloring Example 3" style="width:300px;height:auto;margin:10px;">
+        </div>
+    </section>
+    
+
+    <!-- Graph Generation Form Section -->
+        <div class="form-container">
+          <form id="graphForm" class="graph-form">
+            <label for="vertices">Vertices:</label>
+            <input type="text" id="vertices" placeholder="A,B,C" required />
+  
+            <label for="edges">Edges (source-target-weight):</label>
+            <input type="text" id="edges" placeholder="A-B-1,B-C-2" required />
+  
+            <label for="graphType">Graph Type:</label>
+            <select id="graphType" required>
+              <option value="undirected">Undirected</option>
+              <option value="directed">Directed</option>
+            </select>
+            <button type="submit">Generate Graph</button>
+          </form>
+        </div>
+        <div class="graph-container">
+            <div id="graph"></div>
+        </div>
+        <p id="colorInfo" style="font-size: 14px; margin-top: 10px;"></p>
+        <div class="zoom-container">
+            <button id="zoomIn">Zoom In</button>
+            <button id="zoomOut">Zoom Out</button>
+        </div>
+        <p id="colorInfo" style="font-size: 14px; margin-top: 10px;"></p>
+
+    <footer>
+        <div class="footer-content">
+            <p>Developed by
+                <a href="https://www.linkedin.com/in/jaineel-chhatraliya" target="_blank">Jaineel Chhatraliya</a> and
+                <a href="https://www.linkedin.com/in/hetansh-shah-581732239/" target="_blank">Hetansh Shah</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="d3.v5.min.js"></script>
+    <script src="graph4.js"></script>
+    
+</body>
+</html>

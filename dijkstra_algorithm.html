@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dijkstra's Algorithm - Shortest Path Finder</title>
+    <link rel="stylesheet" href="dijkstra.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Find the Shortest Path using Dijkstra's Algorithm</h1>
+        <form id="graphForm" class="graph-form">
+            <label for="vertices">Vertices (comma separated):</label>
+            <input type="text" id="vertices" placeholder="A,B,C,D" required />
+
+            <label for="edges">Edges (source-target-weight, comma separated):</label>
+            <input type="text" id="edges" placeholder="A-B-1,B-C-2,C-D-1,A-D-4" required />
+
+            <label for="startNode">Start Node:</label>
+            <input type="text" id="startNode" placeholder="A" required />
+
+            <label for="endNode">End Node:</label>
+            <input type="text" id="endNode" placeholder="D" required />
+
+            <button type="submit">Find Shortest Path</button>
+        </form>
+
+        <div class="result">
+            <h2>Shortest Path</h2>
+            <p id="pathOutput">Path:</p>
+            <p id="distanceOutput">Total Distance:</p>
+        </div>
+    </div>
+    <script src="dijkstra.js"></script>
+</body>
+</html>
